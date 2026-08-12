@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="240dp"
+    android:viewportWidth="240"
+    android:viewportHeight="240">
+    
+    <!-- Blue part of French flag -->
+    <path
+        android:fillColor="#0055A4"
+        android:pathData="M0,0h80v240h-80z" />
+    
+    <!-- White part of French flag -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,0h80v240h-80z" />
+    
+    <!-- Red part of French flag -->
+    <path
+        android:fillColor="#EF4135"
+        android:pathData="M160,0h80v240h-80z" />
+    
+    <!-- Add letter "F" overlay -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M90,60h60v20h-40v30h35v20h-35v50h-20z" />
+    
+    <!-- Add Kurdish symbol -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M120,120m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0" />
+</vector> 

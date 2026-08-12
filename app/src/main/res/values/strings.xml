@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">SoranFrench App</string>
+    
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="lessons">Lessons</string>
+    <string name="practice">Practice</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    
+    <!-- Home Screen -->
+    <string name="welcome_message">Bonjour! Ready to learn French?</string>
+    <string name="daily_streak">Daily Streak</string>
+    <string name="days">days</string>
+    <string name="continue_learning">Continue Learning</string>
+    <string name="continue_lessons">Continue Your Lessons</string>
+    <string name="daily_phrase">Daily Phrase</string>
+    
+    <!-- Lessons Screen -->
+    <string name="available_lessons">Available Lessons</string>
+    
+    <!-- Practice Screen -->
+    <string name="translate_to_french">Translate to French</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="correct_answer_explanation">Great job! "Bonjour, comment ça va?" is the correct translation.</string>
+    <string name="correct_answer_is">The correct answer is: %1$s</string>
+    <string name="next_question">Next Question</string>
+    
+    <!-- Profile Screen -->
+    <string name="beginner_level">Beginner Level</string>
+    <string name="statistics">Statistics</string>
+    <string name="day_streak">Day Streak</string>
+    <string name="lessons_completed">Lessons</string>
+    <string name="xp_earned">XP</string>
+    <string name="achievements">Achievements</string>
+    <string name="first_lesson">First Lesson</string>
+    <string name="complete_first_lesson">Complete your first lesson</string>
+    <string name="three_day_streak">3-Day Streak</string>
+    <string name="maintain_streak_three_days">Maintain a 3-day streak</string>
+    <string name="perfect_score">Perfect Score</string>
+    <string name="get_perfect_score">Get a perfect score in a practice session</string>
+</resources>

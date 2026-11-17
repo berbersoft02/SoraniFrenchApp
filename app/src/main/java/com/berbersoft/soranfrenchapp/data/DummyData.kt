@@ -105,16 +105,6 @@ object DummyData {
             example = "Bonjour! Comment ça va aujourd'hui?",
             lessonId = "1"
         ),
-
-        VocabularyItem(
-            id = "v3",
-            french = "Bonsoir",
-            english = "Good evening",
-            kurdish = "ئێوارە باش (é-wa-ra bash)",
-            pronunciation = "bohn-SWAHR",
-            example = "Bonsoir, comment allez-vous ce soir?",
-            lessonId = "1"
-        ),
         VocabularyItem(
             id = "v4",
             french = "Au revoir",
@@ -1717,6 +1707,51 @@ object DummyData {
             kurdish = "تۆ خۆشبەختی منیت (to xoshbextî mnît)",
             pronunciation = "to xoshbextî mnît",
             category = PhraseCategory.SOCIAL
+        ))
+
+        add(Phrase(
+            id = "phrase_emerg_1",
+            french = "Au secours !",
+            english = "Help!",
+            kurdish = "یارمەتیم بدەن! (yarmatîm biden!)",
+            pronunciation = "oh suh-KOOR",
+            category = PhraseCategory.EMERGENCY
+        ))
+
+        add(Phrase(
+            id = "phrase_emerg_2",
+            french = "Appelez un médecin",
+            english = "Call a doctor",
+            kurdish = "پزیشکێک بانگ بکەن (pzîshkêk bang biken)",
+            pronunciation = "ah-play uh(n) mayd-SAHN",
+            category = PhraseCategory.EMERGENCY
+        ))
+
+        add(Phrase(
+            id = "phrase_emerg_3",
+            french = "Où est l'hôpital ?",
+            english = "Where is the hospital?",
+            kurdish = "نەخۆشخانەکە لەکوێیە؟ (nakhoshkhanaka lakweya?)",
+            pronunciation = "oo ay loh-pee-TAHL",
+            category = PhraseCategory.EMERGENCY
+        ))
+
+        add(Phrase(
+            id = "phrase_greet_1",
+            french = "Bonjour",
+            english = "Hello / Good morning",
+            kurdish = "سڵاو / بەیانی باش (silaw / beyanî bash)",
+            pronunciation = "bohn-ZHOOR",
+            category = PhraseCategory.GREETINGS
+        ))
+
+        add(Phrase(
+            id = "phrase_greet_2",
+            french = "Bonsoir",
+            english = "Good evening",
+            kurdish = "ئێوارە باش (êware bash)",
+            pronunciation = "bohn-SWAHR",
+            category = PhraseCategory.GREETINGS
         ))
     }
 

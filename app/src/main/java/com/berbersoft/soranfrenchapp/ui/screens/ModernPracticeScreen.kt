@@ -30,35 +30,17 @@ import com.berbersoft.soranfrenchapp.data.DailyGoalManager
 import com.berbersoft.soranfrenchapp.data.DummyData
 import com.berbersoft.soranfrenchapp.data.VocabularyItem
 import com.berbersoft.soranfrenchapp.data.Exercise
+import com.berbersoft.soranfrenchapp.data.ExerciseEngine
+import com.berbersoft.soranfrenchapp.data.ExerciseResult
 import com.berbersoft.soranfrenchapp.data.ExerciseType
 import com.berbersoft.soranfrenchapp.ui.theme.*
 import kotlin.random.Random
-
-data class ExerciseResult(
-    val exerciseId: String,
-    val vocabularyItem: VocabularyItem,
-    val exerciseType: ExerciseType,
-    val isCorrect: Boolean,
-    val userAnswer: String?
-)
 
 // Helper function to generate options for multiple choice
 private fun generateOptions(
     correctItem: VocabularyItem,
     allItems: List<VocabularyItem>
-): List<String> {
-    val options = mutableListOf(correctItem.english)
-    
-    // Add 3 random incorrect options
-    val incorrectOptions = allItems
-        .filter { it.id != correctItem.id }
-        .map { it.english }
-        .shuffled()
-        .take(3)
-    
-    options.addAll(incorrectOptions)
-    return options.shuffled()
-}
+): List<String> = ExerciseEngine.generateOptions(correctItem, allItems, count = 4, useKurdish = false)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

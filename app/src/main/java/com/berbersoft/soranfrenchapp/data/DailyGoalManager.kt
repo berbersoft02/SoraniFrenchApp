@@ -33,11 +33,17 @@ object DailyGoalManager {
     fun getDailyGoal(): Int = prefs.getInt(KEY_DAILY_GOAL, DEFAULT_DAILY_GOAL)
     
     fun setDailyGoal(goal: Int) {
-        prefs.edit().putInt(KEY_DAILY_GOAL, goal).apply()
+        val safeGoal = if (goal > 0) goal else DEFAULT_DAILY_GOAL
+        prefs.edit().putInt(KEY_DAILY_GOAL, safeGoal).apply()
     }
     
+    fun calculateProgressPercentage(progress: Int, goal: Int): Float {
+        if (goal <= 0 || progress <= 0) return 0f
+        return (progress.toFloat() / goal.toFloat()).coerceIn(0f, 1f)
+    }
+
     fun getProgressPercentage(): Float {
-        return getProgress().toFloat() / getDailyGoal().toFloat()
+        return calculateProgressPercentage(getProgress(), getDailyGoal())
     }
     
     private fun checkAndResetProgress() {

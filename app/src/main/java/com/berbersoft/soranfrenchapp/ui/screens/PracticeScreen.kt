@@ -420,34 +420,10 @@ fun AnswerExplanation(vocabularyItem: VocabularyItem) {
 
 private fun generateExercise(lessonId: String): Exercise {
     val vocabularyItems = DummyData.getVocabularyForLesson(lessonId)
-    val randomItem = vocabularyItems.random()
-    val exerciseType = ExerciseType.values().random()
-    
-    val options = when (exerciseType) {
-        ExerciseType.MULTIPLE_CHOICE, ExerciseType.MATCHING -> {
-            val incorrectOptions = (vocabularyItems - randomItem)
-                .shuffled()
-                .take(3)
-                .map { it.kurdish }
-            (incorrectOptions + randomItem.kurdish).shuffled()
-        }
-        ExerciseType.TRANSLATION -> emptyList()
-    }
-    
-    return Exercise(
-        id = "exercise_${Random.nextInt()}",
-        type = exerciseType,
-        vocabularyItem = randomItem,
-        options = options
-    )
+    val pool = if (vocabularyItems.isNotEmpty()) vocabularyItems else DummyData.getAllVocabulary()
+    return ExerciseEngine.generateExercise(pool)
 }
 
 private fun checkAnswer(exercise: Exercise, answer: String?): Boolean {
-    if (answer == null) return false
-    
-    return when (exercise.type) {
-        ExerciseType.MULTIPLE_CHOICE,
-        ExerciseType.MATCHING -> answer == exercise.vocabularyItem.kurdish
-        ExerciseType.TRANSLATION -> answer.trim().equals(exercise.vocabularyItem.kurdish.trim(), ignoreCase = true)
-    }
+    return ExerciseEngine.checkAnswer(exercise, answer)
 }
